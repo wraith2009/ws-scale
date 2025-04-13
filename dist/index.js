@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// import express from "express";
-const ws_1 = require("ws");
+/**
+ * WebSocker server with http server on same port : 8080
+ * @author RahulBhardwaj
+ */
 // const app = express();
 // app.get("/", (req, res) => {
 //   console.log("http server listening ");
@@ -11,8 +13,12 @@ const ws_1 = require("ws");
 // wss.on("connection", function message(data, isBinary) {
 //   console.log(`Received message: ${data}`);
 // });
-const wss = new ws_1.WebSocketServer({ port: 8080 });
-wss.on("connection", (socket) => {
-    console.log(`client connected`);
-    socket.on("message", (message) => console.log(`Received message` + message));
-});
+/**
+ *  ws without express
+ * @author RahulBhardwaj
+ */
+// const wss = new WebSocketServer({ port: 8080 });
+// wss.on("connection", (socket) => {
+//   console.log(`client connected`);
+//   socket.on("message", (message) => console.log(`Received message` + message));
+// });
